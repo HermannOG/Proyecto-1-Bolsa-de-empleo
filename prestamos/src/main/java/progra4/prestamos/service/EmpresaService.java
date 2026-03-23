@@ -18,6 +18,10 @@ public class EmpresaService {
 
     public void registrar(Empresa e) {
         e.setClave(encoder.encode(e.getClave()));
+
+        e.setAprobada(false);
+        e.setActiva(true);
+
         empresaRepo.save(e);
     }
 

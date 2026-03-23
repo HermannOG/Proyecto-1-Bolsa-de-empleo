@@ -29,6 +29,10 @@ public class OferenteService {
 
     public void registrar(Oferente o) {
         o.setClave(encoder.encode(o.getClave()));
+
+        o.setAprobado(false);
+        o.setActivo(true);
+
         oferenteRepo.save(o);
     }
 
